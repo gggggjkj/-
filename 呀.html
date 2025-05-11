@@ -2,43 +2,97 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>春日影 - MyGO!!!!!</title>
+  <title>我愛真冬</title>
   <style>
     body {
-      background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);
+      margin: 0;
       font-family: 'Noto Serif TC', serif;
+      background: linear-gradient(to bottom, #fffaf0, #e0ffd4);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      margin: 0;
-      color: #2e2e2e;
       text-align: center;
+      color: #3a3a3a;
     }
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.3em;
+      font-size: 3em;
+      margin: 20px 0;
+      color: #6a4b8a;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
-    p {
-      max-width: 600px;
+    .image-container {
+      max-width: 90%;
+      width: 500px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      margin-bottom: 15px;
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+    .comment {
       font-size: 1.2em;
-      margin: 0 1em 1.5em;
+      margin: 10px 0 20px;
+      color: #555;
     }
-    iframe {
-      width: 90%;
-      max-width: 720px;
-      height: 405px;
+    .button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #8b5cf6;
+      color: white;
       border: none;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #7c3aed;
+    }
+
+    /* 彈窗樣式 */
+    .popup {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      font-size: 1.5em;
+      z-index: 1000;
+      display: none;
     }
   </style>
 </head>
 <body>
-  <h1>春日影</h1>
-  <p>微風搖曳，映照春日的光與影。靜下心，細聽旋律流轉。</p>
 
-  <iframe src="https://www.youtube.com/embed/ZsvJUh03MwI" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div id="popup" class="popup">做這網站的人想必是天才吧</div>
+
+  <h1>我愛真冬</h1>
+
+  <div class="image-container">
+    <img src="1000021154.jpg" alt="我愛真冬">
+  </div>
+
+  <div class="comment">這是世康做的超爛網站</div>
+
+  <a class="button" href="https://www.youtube.com/watch?v=ZsvJUh03MwI" target="_blank">點我播春日影</a>
+
+  <script>
+    window.onload = function () {
+      var popup = document.getElementById('popup');
+      popup.style.display = 'block';
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 3000);
+    };
+  </script>
+
 </body>
 </html>
